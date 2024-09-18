@@ -1,0 +1,155 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Left-aligned Logo */
+header .logo h1 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Navigation Menu */
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Universal hover effect on navigation links */
+header nav ul li a:hover {
+  background-color: #555;
+  color: #e74c3c;
+}
+
+/* Main, Events, Contact, and Services Section Styling */
+.main, .events, .contact, .services {
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Main Section with Full Background Image */
+.main {
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20201028/pngtree-abstract-technology-background-technical-electric-image_443494.jpg) no-repeat center center;
+  background-size: cover; /* Ensures the background image covers the entire area */
+  min-height: 100vh; /* Ensures that the section occupies the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Event Cards and Contact Form Styling */
+.event-card, .contact form {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in;
+}
+
+.contact form {
+  max-width: 500px;
+}
+
+.contact label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header nav ul {
+      flex-direction: column;
+  }
+
+  header nav ul li {
+      margin-bottom: 10px;
+      margin-right: 0;
+  }
+
+  .main {
+      padding: 20px;
+  }
+}
